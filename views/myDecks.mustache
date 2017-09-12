@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My Decks</title>
+  </head>
+  <body>
+    <header>
+      <a href="/">Home</a>
+    </header>
+    <div class="container">
+      {{#myDecks}}
+      <div class="deck">
+        <a href="/decks/play/:id">{{name}}</a>
+        <form class="" action="/user/decks/edit/{{_id}}" method="get">
+          <button type="submit" name="button">edit</button>
+        </form>
+
+      <form class="" action="decks/delete/{{_id}}" method="post">
+        <button type="submit" name="button">Delete</button>
+      </form>
+
+      </div>
+      {{/myDecks}}
+
+
+
+    </div>
+  </body>
+</html>
